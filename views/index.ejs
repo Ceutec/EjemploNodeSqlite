@@ -1,0 +1,15 @@
+<h1>App de mensajes</h1>
+
+<ul>
+  <% for(var i=0;i<mensajes.length;i++) { %>
+    <li>
+      <%= mensajes[i][0] %>: <%= mensajes[i][1] %>
+    </li>
+  <% } %>
+</ul>
+
+<form action="http://localhost:8000/enviar" method="get">
+  Usuario: <input type="text" name="usuario"/><br>
+  Mensaje: <input type="text" name="mensaje"/><br>
+  <input type="submit" value="Enviar"/>
+</form>
